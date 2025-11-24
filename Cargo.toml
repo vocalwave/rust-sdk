@@ -1,0 +1,28 @@
+[package]
+name = "qrng-api"
+version = "1.0.0"
+edition = "2021"
+authors = ["QRNG API <support@qrngapi.com>"]
+description = "Official Rust SDK for QRNG API - Quantum Random Number Generation"
+license = "MIT"
+repository = "https://github.com/qrng-api/rust-sdk"
+homepage = "https://qrngapi.com"
+documentation = "https://docs.rs/qrng-api"
+readme = "README.md"
+keywords = ["quantum", "random", "cryptography", "entropy", "qrng"]
+categories = ["api-bindings", "cryptography"]
+exclude = [
+    ".github/",
+    "examples/",
+    "tests/",
+]
+
+[dependencies]
+reqwest = { version = "0.11", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+tokio-tungstenite = "0.20"
+
+[dev-dependencies]
+tokio-test = "0.4"
